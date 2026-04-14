@@ -694,6 +694,7 @@
       <span class="cmd-pill" data-cmd="contact">contact</span>
       <span class="cmd-pill" data-cmd="ls projects">ls projects</span>
       <span class="cmd-pill" data-cmd="uptime">uptime</span>
+      <span class="cmd-pill" data-cmd="donut">donut</span>
       <span class="cmd-pill" data-cmd="clear">clear</span>
     </div>
   </div>
@@ -754,6 +755,7 @@
       '<span class="t-key">contact</span>     — get contact info',
       '<span class="t-key">ls projects</span> — list all projects',
       '<span class="t-key">uptime</span>      — how long I\'ve been coding',
+      '<span class="t-key">donut</span>       — spinning donut animation',
       '<span class="t-key">clear</span>       — clear terminal',
     ],
     whoami: () => [
@@ -793,6 +795,7 @@
         `  <span class="t-key">commits</span>       <span class="t-val">200+</span>`,
       ];
     },
+    donut: null,
     clear: null,
   };
 
@@ -813,6 +816,67 @@
     promptSpan.className = 'term-line';
     promptSpan.innerHTML = `<span class="t-prompt">visitor@portfolio:~$</span> <span class="t-cmd">${raw}</span>`;
     output.appendChild(promptSpan);
+
+    if (cmd === 'donut') {
+      const promptSpan = document.createElement('span');
+      promptSpan.className = 'term-line';
+      output.appendChild(promptSpan);
+
+      let A = 1, B = 1;
+      let frame = 0;
+      const maxFrames = 200;
+      let donutLine = document.createElement('span');
+      donutLine.className = 'term-line';
+      donutLine.style.fontFamily = 'monospace';
+      donutLine.style.whiteSpace = 'pre';
+      donutLine.style.lineHeight = '1.1';
+      donutLine.style.fontSize = '9px';
+      output.appendChild(donutLine);
+
+      function renderDonut() {
+        if (frame++ > maxFrames) {
+          const done = document.createElement('span');
+          done.className = 'term-line';
+          done.innerHTML = '<span class="t-comment">// donut complete</span>';
+          output.appendChild(done);
+          output.scrollTop = output.scrollHeight;
+          return;
+        }
+        const size = 30;
+        const K2 = 5;
+        const K1 = size * K2 * 3 / (8 * 3);
+        const illumination = '.,-~:;=!*#$@'.split('');
+        const out = Array.from({length: size}, () => Array(size).fill(' '));
+        const zbuf = Array.from({length: size}, () => Array(size).fill(0));
+        const cosA = Math.cos(A), sinA = Math.sin(A);
+        const cosB = Math.cos(B), sinB = Math.sin(B);
+        for (let theta = 0; theta < 2 * Math.PI; theta += 0.07) {
+          const cosT = Math.cos(theta), sinT = Math.sin(theta);
+          const cx = 2 + cosT, cy = sinT;
+          for (let phi = 0; phi < 2 * Math.PI; phi += 0.02) {
+            const cosP = Math.cos(phi), sinP = Math.sin(phi);
+            const x = (cosB * cosP + sinA * sinB * sinP) * cx - cy * cosA * sinB;
+            const y = (sinB * cosP - sinA * cosB * sinP) * cx + cy * cosA * cosB;
+            const z = K2 + cosA * sinP * cx + cy * sinA;
+            const ooz = 1 / z;
+            const xp = Math.floor(size / 2 + K1 * ooz * x);
+            const yp = Math.floor(size / 2 - K1 * ooz * y);
+            const L = Math.round(((cosP * cosT * sinB - cosA * sinP * cosT - sinA * sinT + cosB * (cosA * sinT - sinP * cosT * sinA)) * 8));
+            if (L >= 0 && xp >= 0 && xp < size && yp >= 0 && yp < size && ooz > zbuf[xp][yp]) {
+              zbuf[xp][yp] = ooz;
+              out[xp][yp] = illumination[Math.min(L, illumination.length - 1)];
+            }
+          }
+        }
+        donutLine.textContent = out.map(row => row.join(' ')).join('\n');
+        output.scrollTop = output.scrollHeight;
+        A += 0.07;
+        B += 0.02;
+        requestAnimationFrame(renderDonut);
+      }
+      renderDonut();
+      return;
+    }
 
     if (cmd === 'clear') { output.innerHTML = ''; return; }
 
@@ -847,8 +911,6 @@
       input.focus();
     });
   });
-
-  input.focus();
 </script>
 </body>
 </html>
