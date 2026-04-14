@@ -203,8 +203,10 @@
       background: var(--bg3);
       border-bottom: 1px solid var(--border);
       padding: .55rem 1rem;
-      display: flex; align-items: center; gap: .5rem;
+      display: flex; align-items: center; gap: .25rem;
     }
+  
+    .dot-group { display: flex; align-items: center; gap: 5px;}
     .dot { width: 11px; height: 11px; border-radius: 50%; }
     .dot-red   { background: #ff5f56; }
     .dot-amber { background: #ffbd2e; }
@@ -479,7 +481,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">&gt; <span>~/</span>yourname</div>
+  <div class="nav-logo">&gt; <span>~/</span>samuel_schenk</div>
   <ul class="nav-links">
     <li><a href="#projects">projects</a></li>
     <li><a href="#experience">experience</a></li>
@@ -493,12 +495,11 @@
   <div class="hero-inner">
     <div class="hero-eyebrow">available for work</div>
     <h1>
-      Full-Stack<br>
-      <span class="accent">Developer.</span>
+      Samuel<br>
+      <span class="accent">Schenk</span>
     </h1>
     <p class="hero-sub">
       I build fast, functional, and thoughtfully crafted software.<br>
-      From CLI tools to distributed systems — clean code, every time.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">$ view_projects</a>
@@ -520,17 +521,14 @@
       <div class="project-top">
         <span class="project-icon">⚡</span>
         <div class="project-links">
-          <a href="#" title="GitHub">&#x2197;</a>
-          <a href="#" title="Live">&#x29C9;</a>
+          <a href="https://github.com/SaSc-5104/http-webserver" title="GitHub">&#x2197;</a>
         </div>
       </div>
-      <div class="project-name">NexusAPI</div>
-      <p class="project-desc">High-throughput REST API gateway with automatic rate limiting, JWT auth, and real-time telemetry via WebSockets.</p>
+      <div class="project-name">HTTP Webserver</div>
+      <p class="project-desc">Custom HTTP/1.1 web server with support for GET and HEAD requests, featuring robust status handling and standards-compliant error responses.</p>
       <div class="tag-row">
-        <span class="tag green">Node.js</span>
-        <span class="tag cyan">Redis</span>
-        <span class="tag">PostgreSQL</span>
-        <span class="tag">Docker</span>
+        <span class="tag green">Java</span>
+        <span class="tag cyan">Network Design</span>
       </div>
     </div>
 
@@ -538,83 +536,48 @@
       <div class="project-top">
         <span class="project-icon">🧠</span>
         <div class="project-links">
-          <a href="#">&#x2197;</a><a href="#">&#x29C9;</a>
+          <a href="https://github.com/SaSc-5104/boston-housing-price-prediction">&#x2197;</a>
         </div>
       </div>
-      <div class="project-name">VectorMind</div>
-      <p class="project-desc">LLM-powered knowledge base with semantic search, embedding pipelines, and a minimal chat interface.</p>
+      <div class="project-name">Linear Regression vs. Neural Network</div>
+      <p class="project-desc">Linear Regression baseline is compared against a feedforward neural netwrok (MLP) to predict median home prices in the Boston-area</p>
       <div class="tag-row">
         <span class="tag green">Python</span>
-        <span class="tag cyan">LangChain</span>
-        <span class="tag">Pinecone</span>
-        <span class="tag">FastAPI</span>
+        <span class="tag cyan">PyTorch</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
       </div>
     </div>
 
     <div class="project-card reveal">
       <div class="project-top">
-        <span class="project-icon">🛰️</span>
+        <span class="project-icon">📈</span>
         <div class="project-links">
-          <a href="#">&#x2197;</a><a href="#">&#x29C9;</a>
+          <a href="https://github.com/SaSc-5104/tradingview-financial-tool">&#x2197;</a>
         </div>
       </div>
-      <div class="project-name">Orbital Dashboard</div>
-      <p class="project-desc">Real-time satellite telemetry visualizer. Renders orbital paths on a 3D globe with live sensor feeds.</p>
+      <div class="project-name">Pine Script Stock Indicator</div>
+      <p class="project-desc">Parabolic SAR stategy that utilizes a simple moving average as well as RSI overbought and oversold metrics to achieve a profitability rate of 61%</p>
       <div class="tag-row">
-        <span class="tag green">React</span>
-        <span class="tag cyan">Three.js</span>
-        <span class="tag">WebGL</span>
-        <span class="tag">Go</span>
+        <span class="tag green">Pine Script</span>
+        <span class="tag cyan">Technical Analysis</span>
       </div>
     </div>
 
     <div class="project-card reveal">
       <div class="project-top">
-        <span class="project-icon">🔒</span>
+        <span class="project-icon">🔑</span>
         <div class="project-links">
-          <a href="#">&#x2197;</a><a href="#">&#x29C9;</a>
+          <a href="https://github.com/SaSc-5104/network-traffic-classification">&#x2197;</a>
         </div>
       </div>
-      <div class="project-name">ShieldCLI</div>
-      <p class="project-desc">Terminal-native secrets manager with AES-256 encryption, team sharing, and CI/CD integrations.</p>
+      <div class="project-name">AI Network Traffic Classifier</div>
+      <p class="project-desc">Predicts the type of application that generated the given network traffic data using features like packet size and timing between packets.</p>
       <div class="tag-row">
-        <span class="tag green">Rust</span>
-        <span class="tag cyan">CLI</span>
-        <span class="tag">TOML</span>
-        <span class="tag">GitHub Actions</span>
-      </div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top">
-        <span class="project-icon">📡</span>
-        <div class="project-links">
-          <a href="#">&#x2197;</a><a href="#">&#x29C9;</a>
-        </div>
-      </div>
-      <div class="project-name">PulseMetrics</div>
-      <p class="project-desc">Lightweight observability stack: custom metrics ingestion, Grafana dashboards, and anomaly alerting.</p>
-      <div class="tag-row">
-        <span class="tag green">Go</span>
-        <span class="tag cyan">InfluxDB</span>
-        <span class="tag">Grafana</span>
-        <span class="tag">Kubernetes</span>
-      </div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top">
-        <span class="project-icon">🤖</span>
-        <div class="project-links">
-          <a href="#">&#x2197;</a><a href="#">&#x29C9;</a>
-        </div>
-      </div>
-      <div class="project-name">DeployBot</div>
-      <p class="project-desc">Slack-native deployment bot that triggers pipelines, rolls back releases, and posts incident summaries.</p>
-      <div class="tag-row">
-        <span class="tag green">TypeScript</span>
-        <span class="tag cyan">Slack SDK</span>
-        <span class="tag">AWS Lambda</span>
+        <span class="tag green">Python</span>
+        <span class="tag cyan">Wireshark</span>
+        <span class="tag">PyShark</span>
+        <span class="tag">Pandas</span>
       </div>
     </div>
   </div>
@@ -631,47 +594,46 @@
   <div class="exp-list">
     <div class="exp-item reveal">
       <div class="exp-meta">
-        <div class="exp-date">2022 — Present</div>
-        <div class="exp-company">TechCorp Inc.</div>
+        <div class="exp-date">2025 — Present</div>
+        <div class="exp-company">Association for Computing Machinery</div>
       </div>
       <div class="exp-body">
-        <div class="exp-role">Senior Software Engineer</div>
-        <p class="exp-desc">Lead backend architecture for a platform serving 2M+ daily users. Own the infrastructure roadmap and mentor a team of 4.</p>
+        <div class="exp-role">Treasurer</div>
+        <p class="exp-desc">Lead financial operations of the association and secure funding and sponsorship from companies.</p>
         <ul class="exp-bullets">
-          <li>Reduced API latency by 60% through caching layer redesign</li>
-          <li>Migrated monolith to microservices with zero downtime</li>
-          <li>Introduced observability tooling across 12 services</li>
+          <li>Increased funding by nearly $10,000 from previous board</li>
+          <li>Secured sponsorship from EY, MLH, and Northrop Grumman</li>
+          <li>Created lasting relationships with sponsors</li>
         </ul>
       </div>
     </div>
 
     <div class="exp-item reveal">
       <div class="exp-meta">
-        <div class="exp-date">2020 — 2022</div>
-        <div class="exp-company">StartupXYZ</div>
+        <div class="exp-date">2024 — 2025</div>
+        <div class="exp-company">Association for Computing Machinery</div>
       </div>
       <div class="exp-body">
-        <div class="exp-role">Full-Stack Engineer</div>
-        <p class="exp-desc">Early-stage hire building product from 0 to 1. Shipped the core web app, auth system, and billing integrations.</p>
+        <div class="exp-role">Career Chair</div>
+        <p class="exp-desc">Head of professional development and career readiness at the ACM W&M chapter.</p>
         <ul class="exp-bullets">
-          <li>Delivered MVP in 6 weeks; 500 signups in first week</li>
-          <li>Built Stripe integration handling $1M+ in transactions</li>
-          <li>Designed and maintained a CI/CD pipeline on AWS</li>
+          <li>Delivered opportunities for mock technical interviews</li>
+          <li>Presented on industry landscape and how to best prepare</li>
         </ul>
       </div>
     </div>
 
     <div class="exp-item reveal">
       <div class="exp-meta">
-        <div class="exp-date">2018 — 2020</div>
-        <div class="exp-company">DevAgency</div>
+        <div class="exp-date">2023 — 2024</div>
+        <div class="exp-company">SYNC Tours</div>
       </div>
       <div class="exp-body">
-        <div class="exp-role">Junior Developer</div>
-        <p class="exp-desc">Worked on client projects across e-commerce, SaaS, and fintech verticals. Sharpened fundamentals across the stack.</p>
+        <div class="exp-role">Lead Developer</div>
+        <p class="exp-desc">Led the design and implementation of the SYNC Tours web interface and backend framework.</p>
         <ul class="exp-bullets">
-          <li>Delivered 8 client projects on time and within scope</li>
-          <li>Contributed to open-source React component library</li>
+          <li>Designed the core survery algorithm to match students with the best fit tour guide</li>
+          <li>Deployed the website under the domain synctours.com (no longer active)</li>
         </ul>
       </div>
     </div>
@@ -688,17 +650,16 @@
 
   <div class="software-grid">
     <div class="sw-card reveal"><span class="sw-icon">🐍</span><div class="sw-name">Python</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">🦀</span><div class="sw-name">Rust</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">⚛️</span><div class="sw-name">React</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">🐹</span><div class="sw-name">Go</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">🐋</span><div class="sw-name">Docker</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">☸️</span><div class="sw-name">Kubernetes</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span><span class="sw-dot"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">☁️</span><div class="sw-name">AWS</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">🐘</span><div class="sw-name">PostgreSQL</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">🔴</span><div class="sw-name">Redis</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">🔷</span><div class="sw-name">TypeScript</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">⚙️</span><div class="sw-name">Linux</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span></div></div>
-    <div class="sw-card reveal"><span class="sw-icon">🔁</span><div class="sw-name">CI/CD</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
+    <div class="sw-card reveal"><span class="sw-icon">🔥</span><div class="sw-name">Java</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span></div></div>
+    <div class="sw-card reveal"><span class="sw-icon">⚙️</span><div class="sw-name">C</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
+    <div class="sw-card reveal"><span class="sw-icon">🔩</span><div class="sw-name">C++</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
+    <div class="sw-card reveal"><span class="sw-icon">🌲</span><div class="sw-name">Pine Script</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
+    <div class="sw-card reveal"><span class="sw-icon">🧩</span><div class="sw-name">HTML</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span><span class="sw-dot"></span></div></div>
+    <div class="sw-card reveal"><span class="sw-icon">🔑</span><div class="sw-name">Linux</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span></div></div>
+    <div class="sw-card reveal"><span class="sw-icon">☁️</span><div class="sw-name">PyTorch</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span><span class="sw-dot"></span></div></div>
+    <div class="sw-card reveal"><span class="sw-icon">🐼</span><div class="sw-name">Pandas</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot"></span><span class="sw-dot"></span><span class="sw-dot"></span></div></div>
+    <div class="sw-card reveal"><span class="sw-icon">🔹</span><div class="sw-name">LaTeX</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span></div></div>
+    <div class="sw-card reveal"><span class="sw-icon">💡</span><div class="sw-name">Git</div><div class="sw-level"><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span><span class="sw-dot filled"></span></div></div>
   </div>
 </section>
 
@@ -710,12 +671,14 @@
     <div class="section-line"></div>
   </div>
   <div class="interactive-inner">
-    <p class="hint">// Try typing a command below, or click a suggestion</p>
+    <p class="hint">// Type a command or click a suggestion below</p>
     <div class="live-terminal terminal-box">
       <div class="terminal-titlebar">
-        <span class="dot dot-red"></span>
-        <span class="dot dot-amber"></span>
-        <span class="dot dot-green"></span>
+        <div class = "dot-group"> 
+          <span class="dot dot-red"></span>
+          <span class="dot dot-amber"></span>
+          <span class="dot dot-green"></span>
+        </div>
         <span class="live-title">portfolio — bash — 80×24</span>
       </div>
       <div id="term-output"></div>
@@ -745,37 +708,18 @@
   </div>
   <div class="contact-grid">
     <div class="contact-left reveal">
-      <h2>Let's build<br>something great.</h2>
-      <p>Open to full-time roles, contract work, and interesting side-projects. I respond to every message — usually within 24 hours.</p>
       <div class="social-links">
-        <a href="#" class="social-link"><span class="si">→</span> github.com/yourhandle</a>
-        <a href="#" class="social-link"><span class="si">→</span> linkedin.com/in/yourname</a>
-        <a href="#" class="social-link"><span class="si">→</span> twitter.com/yourhandle</a>
-        <a href="mailto:you@example.com" class="social-link"><span class="si">→</span> you@example.com</a>
+        <a href="https://github.com/SaSc-5104" class="social-link"><span class="si">→</span> Github</a>
+        <a href="https://www.linkedin.com/in/samuel-thomas-schenk/" class="social-link"><span class="si">→</span> LinkedIn</a>
+        <a href="mailto:stschenk2013@gmail.com?subject=Hello%20Samuel" class="social-link"><span class="si">→</span> Email</a>
       </div>
-    </div>
-    <div class="contact-form reveal">
-      <div class="form-group">
-        <label>// name</label>
-        <input type="text" placeholder="Jane Smith" />
-      </div>
-      <div class="form-group">
-        <label>// email</label>
-        <input type="email" placeholder="jane@company.com" />
-      </div>
-      <div class="form-group">
-        <label>// message</label>
-        <textarea placeholder="Hey, I'd love to chat about…"></textarea>
-      </div>
-      <button class="btn btn-primary" type="button">$ send_message</button>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div>© 2026 <span>yourname</span> — built with caffeine &amp; code</div>
-  <div>designed in the terminal</div>
+  <div>©2026 -- Built with HTML by Samuel Schenk</div>
 </footer>
 
 <script>
@@ -814,43 +758,39 @@
     ],
     whoami: () => [
       '<span class="t-comment">// loading profile…</span>',
-      '<span class="t-key">name</span>        <span class="t-val">"Your Name"</span>',
-      '<span class="t-key">role</span>        <span class="t-val">"Full-Stack Engineer"</span>',
-      '<span class="t-key">location</span>    <span class="t-val">"Your City, Earth"</span>',
+      '<span class="t-key">name</span>        <span class="t-val">"Samuel Schenk"</span>',
+      '<span class="t-key">role</span>        <span class="t-val">"Third year student"</span>',
+      '<span class="t-key">location</span>    <span class="t-val">"Virginia Beach, Earth"</span>',
       '<span class="t-key">available</span>   <span class="t-val">true</span>',
-      '<span class="t-key">coffee/day</span>  <span class="t-val">4</span>',
+      '<span class="t-key">coffee/day</span>  <span class="t-val">1</span>',
     ],
     skills: () => [
       '<span class="t-comment">// core competencies</span>',
-      '  <span class="t-key">languages</span>   <span class="t-val">["Python", "TypeScript", "Go", "Rust"]</span>',
-      '  <span class="t-key">frontend</span>    <span class="t-val">["React", "Next.js", "Three.js"]</span>',
-      '  <span class="t-key">backend</span>     <span class="t-val">["Node", "FastAPI", "gRPC"]</span>',
-      '  <span class="t-key">infra</span>       <span class="t-val">["AWS", "Docker", "Kubernetes"]</span>',
-      '  <span class="t-key">data</span>        <span class="t-val">["PostgreSQL", "Redis", "InfluxDB"]</span>',
+      '  <span class="t-key">languages</span>   <span class="t-val">["Python", "Java", "C", "C++", "Linux", "Etc."]</span>',
+      '  <span class="t-key">frontend</span>    <span class="t-val">["Java Swing", "CSS", "HTML"]</span>',
+      '  <span class="t-key">backend</span>     <span class="t-val">["Python", "Java", "Git"]</span>',
+      '  <span class="t-key">data</span>        <span class="t-val">["Pandas", "Matplotlib", "PyTorch"]</span>',
     ],
     contact: () => [
       '<span class="t-comment">// contact info</span>',
-      '  <span class="t-key">email</span>   <span class="t-val">you@example.com</span>',
-      '  <span class="t-key">github</span>  <span class="t-val">github.com/yourhandle</span>',
-      '  <span class="t-key">twitter</span> <span class="t-val">@yourhandle</span>',
+      '  <span class="t-key">email</span>   <span class="t-val">stschenk2013@gmail.com</span>',
+      '  <span class="t-key">github</span>  <span class="t-val">github.com/SaSc-5104</span>',
+      '  <span class="t-key">linkedin</span> <span class="t-val">linkedin.com/in/samuel-thomas-schenk/</span>',
     ],
     'ls projects': () => [
-      '<span class="t-comment">// drwxr-xr-x  6 projects</span>',
-      '  <span class="t-green" style="color:var(--green)">NexusAPI</span>         REST gateway · Node.js · Redis',
-      '  <span class="t-green" style="color:var(--green)">VectorMind</span>       LLM knowledge base · Python',
-      '  <span class="t-green" style="color:var(--green)">OrbitalDashboard</span> 3D telemetry · React · Three.js',
-      '  <span class="t-green" style="color:var(--green)">ShieldCLI</span>        Secrets manager · Rust',
-      '  <span class="t-green" style="color:var(--green)">PulseMetrics</span>     Observability stack · Go',
-      '  <span class="t-green" style="color:var(--green)">DeployBot</span>        Slack deploy bot · TypeScript',
+      '<span class="t-comment">// drwxr-xr-x  4 projects</span>',
+      '  <span class="t-green" style="color:var(--green)">HTTP Webserver</span>           Java · Network Design',
+      '  <span class="t-green" style="color:var(--green)">Linear Regression vs. Neural Network</span>       Python · PyTorch',
+      '  <span class="t-green" style="color:var(--green)">Pine Script Stock Indicator</span> Pine Script · Technical Analysis',
+      '  <span class="t-green" style="color:var(--green)">AI Network Traffic Classifier</span>        Python · Wireshark',
     ],
     uptime: () => {
-      const years = (new Date().getFullYear() - 2018);
+      const years = (new Date().getFullYear() - 2023);
       return [
         '<span class="t-comment">// system uptime</span>',
-        `  <span class="t-key">coding since</span>  <span class="t-val">2018</span>`,
+        `  <span class="t-key">coding since</span>  <span class="t-val">2023</span>`,
         `  <span class="t-key">years active</span>  <span class="t-val">${years}</span>`,
-        `  <span class="t-key">commits</span>       <span class="t-val">3,400+</span>`,
-        `  <span class="t-key">load avg</span>      <span class="t-val">high — always shipping</span>`,
+        `  <span class="t-key">commits</span>       <span class="t-val">200+</span>`,
       ];
     },
     clear: null,
@@ -891,8 +831,6 @@
 
   // boot message
   printLines([
-    '<span class="t-comment">// Welcome to my portfolio terminal</span>',
-    '<span class="t-comment">// Type a command or click a suggestion below</span>',
     '&nbsp;',
   ]);
 
