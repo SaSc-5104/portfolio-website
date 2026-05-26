@@ -1,2 +1,2 @@
-# portfolio-website
-Samuel Schenk’s Portfolio Website
+Personal Protfolio Website
+Visit here: https://sasc-5104.github.io/portfolio-website/
